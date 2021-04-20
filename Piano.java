@@ -14,5 +14,16 @@ public class Piano extends World
     public Piano() 
     {
         super(800, 340, 1);
+        makeKeys();
+    }
+    /**
+     * create the piano keys
+     */
+    public void makeKeys()
+    {
+        for (int i=0; i<12; i++)
+        {
+            addObject (new Key ("g", "3a.wav"), i*63 + 54, 140);
+        }
     }
 }
